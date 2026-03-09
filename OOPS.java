@@ -1,3 +1,6 @@
+import java.util.*;
+import bank.*;;
+
 class Pen {
     String color;
     String type; // 1. ballpoint, gel
@@ -135,5 +138,11 @@ public class OOPS {
         Circle objCircle = new Circle();
         objCircle.area(); // calling base class area method
         objCircle.area(obj.r); // calling Cirlce area method
+
+        // Package Accessing ->
+        // bank.Account account1 = new bank.Account();
+        // account1.name = "customer1";
+
+        
     }
 }
