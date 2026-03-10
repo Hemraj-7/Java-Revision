@@ -87,6 +87,66 @@ class EqualateralTriangle extends Triangle {
     }
 }
 
+// Abstraction ->
+abstract class Animal {
+    abstract void walk();
+
+    public void eat() {
+        System.out.println("Animal Eats");
+    }
+
+    Animal() {
+        System.out.println("You are creating a new animal");
+    }
+}
+
+class Horse extends Animal {
+    public void walk() {
+        System.out.println("Walks on 4 legs");
+    }
+
+    Horse() {
+        System.out.println("Created a Horse");
+    }
+}
+
+class Hen extends Animal {
+    public void walk() {
+        System.out.println("Walks on 2 legs");
+    }
+}
+
+// Interfaces
+interface Animal2 {
+    public void walk();
+
+    // Animal2(){} // interfaces dont have constructor
+    // void eat(){
+    // System.out.println("Animal eats");
+    // } // in inter face we dont able to create method
+}
+
+interface Herbivore {
+
+}
+
+// we can achive the multiple inheritance thorugh implements
+class Horse2 implements Animal2, Herbivore {
+    public void walk() {
+        System.out.println("Horse2 walks on 4 legs");
+    }
+}
+
+// Static ->
+class Students {
+    String name;
+    static String school;
+
+    public static void changeSchool() {
+        school = "newSchool";
+    }
+}
+
 public class OOPS {
     public static void main(String args[]) {
         // creating object of Pen class
@@ -143,6 +203,28 @@ public class OOPS {
         // bank.Account account1 = new bank.Account();
         // account1.name = "customer1";
 
-        
+        // Abstraction ->
+        Horse horse = new Horse();
+        horse.walk();
+        horse.eat();
+        // Animal animal = new Animal(); // it is abstract class. if we create an object
+        // of that class it gives us an run time error.
+
+        // Interfaces ->
+        Horse2 horse2 = new Horse2();
+        horse2.walk();
+
+        // Static ->
+        Students.school = "ABC";
+        Students student1 = new Students();
+        Students student2 = new Students();
+        student1.name = "Hemsa";
+        student2.name = "SitaRam";
+        System.out.println(student1.name + " " + student1.school);
+        System.out.println(student2.name + " " + student2.school);
+        student1.changeSchool(); // static method or member has same data for all members or methods.
+        System.out.println(student1.name + " " + student1.school);
+        System.out.println(student2.name + " " + student2.school);
+
     }
 }
