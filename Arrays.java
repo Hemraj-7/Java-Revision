@@ -52,5 +52,6 @@ public class Arrays {
                 System.out.println("the number found at index:  " + i);
             }
         }
+        ac.close();
     }
 }

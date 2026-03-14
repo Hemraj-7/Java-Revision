@@ -47,6 +47,6 @@ public class BitManipulation {
             int clearNumber = newBitMask & n;
             System.out.println(clearNumber);
         }
-
+        sc.close();
     }
 }

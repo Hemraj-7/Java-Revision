@@ -74,5 +74,7 @@ public class Strings {
         System.out.println(sentence.substring(8));
 
         // Strings are Immutable
+
+        sc.close();
     }
 }

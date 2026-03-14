@@ -179,6 +179,6 @@ public class QuestionsSet1 {
             first = second;
             second = next;
         }
-
+        sc.close();
     }
 }

@@ -15,14 +15,14 @@ public class Variables {
         System.out.println("*\n**\n***\n****");
 
         // Variables:-
-        String name = "Hemsa";
-        int age = 24;
-        double price = 34.124;
+        // String name = "Hemsa";
+        // int age = 24;
+        // double price = 34.124;
         int a = 25;
         int b = 10;
 
         // b = 20;
-        name = "Hem Raj";
+        // name = "Hem Raj";
 
         int sum = a + b;
         int diff = a - b;
@@ -47,6 +47,6 @@ public class Variables {
         System.out.println("Enter the value of y: ");
         int y = sc.nextInt();
         System.out.println("The sum of x and y is: " + (x + y));
-
+        sc.close();
     }
 }

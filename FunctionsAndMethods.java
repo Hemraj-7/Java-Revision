@@ -51,5 +51,7 @@ public class FunctionsAndMethods {
         int factiorialNumber = sc.nextInt();
 
         calculateFatorial(factiorialNumber);
+
+        sc.close();
     }
 }

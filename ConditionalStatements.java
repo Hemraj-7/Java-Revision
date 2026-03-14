@@ -65,6 +65,6 @@ public class ConditionalStatements {
             break;
             default: System.out.println("Invalid Button");
         }
-
+        sc.close();
     }
 }
