@@ -49,6 +49,38 @@ public class Recursion1 {
         printFib(b, c, n - 1);
     }
 
+    // Print x^n (stack height = n)
+    public static int calcPower(int x, int n) {
+        if (n == 0) { // base case 1
+            return 1;
+        }
+        if (x == 0) { // base case 2
+            return 0;
+        }
+
+        int xPownm1 = calcPower(x, n - 1); // kaam
+        int xPow = x * xPownm1;
+        return xPow;
+    }
+
+    // Print x^n (stack height = log n)
+    public static int calcPowerLogN(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        if (x == 0) {
+            return 0;
+        }
+
+        // If n is even ->
+        if (n % 2 == 0) {
+            return calcPowerLogN(x, n / 2) * calcPowerLogN(x, n / 2);
+        } else { // n is odd
+            return calcPowerLogN(x, n / 2) * calcPowerLogN(x, n / 2) * x;
+        }
+
+    }
+
     public static void main(String args[]) {
 
         System.out.println("Numbers from 5 to 1:");
@@ -73,5 +105,14 @@ public class Recursion1 {
         n = 30;
         printFib(a, b, n - 2);
 
+        System.out.println();
+        System.out.println("X^n: ");
+        int x = 2;
+        n = 5;
+        int ansN = calcPower(x, n);
+        System.out.println(ansN);
+        
+        int ansLogN = calcPowerLogN(x, n);
+        System.out.println(ansLogN);
     }
 }
